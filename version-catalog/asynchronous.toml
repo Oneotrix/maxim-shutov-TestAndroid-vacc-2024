@@ -1,0 +1,9 @@
+[versions]
+# Coroutines
+coroutines = "1.8.0"
+
+
+[libraries]
+# Coroutines
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines"}
+

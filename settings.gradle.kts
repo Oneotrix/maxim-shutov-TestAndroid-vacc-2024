@@ -17,6 +17,20 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("core") {
+            from(files("version-catalog/core.toml"))
+        }
+        create("network") {
+            from(files("version-catalog/network.toml"))
+        }
+        create("asynchronous") {
+            from(files("version-catalog/asynchronous.toml"))
+        }
+        create("ioc") {
+            from(files("version-catalog/ioc.toml"))
+        }
+    }
 }
 
 rootProject.name = "maxim-shutov-TestAndroid-vacc-2024"
