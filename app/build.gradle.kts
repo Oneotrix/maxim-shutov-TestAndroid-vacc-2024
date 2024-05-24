@@ -62,6 +62,9 @@ dependencies {
     // Serialization
     implementation(core.kotlinx.serializarion)
 
+    // Picasso
+    implementation(network.picasso)
+
     implementation(core.androidx.core.ktx)
     implementation(core.androidx.appcompat)
     implementation(core.material)

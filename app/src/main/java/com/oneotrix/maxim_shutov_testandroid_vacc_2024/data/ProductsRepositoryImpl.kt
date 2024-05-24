@@ -1,4 +1,14 @@
 package com.oneotrix.maxim_shutov_testandroid_vacc_2024.data
 
-class ProductsRepositoryImpl {
+import com.oneotrix.maxim_shutov_testandroid_vacc_2024.data.network.ProductsNetModel
+import com.oneotrix.maxim_shutov_testandroid_vacc_2024.domain.model.ProductModel
+import com.oneotrix.maxim_shutov_testandroid_vacc_2024.domain.repository.ProductsRepository
+
+class ProductsRepositoryImpl(
+    private val api: Api
+): ProductsRepository {
+    override suspend fun getProducts(): List<ProductModel> {
+        return api.getMealsList().meals
+            .map { ProductsNetModel.map(it) }
+    }
 }
