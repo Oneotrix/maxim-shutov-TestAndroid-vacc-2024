@@ -5,6 +5,7 @@ import com.oneotrix.maxim_shutov_testandroid_vacc_2024.di.app.AppComponent
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.di.app.DaggerAppComponent
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.di.navigation.NavigationComponent
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.di.products.ProductsComponent
+import com.squareup.picasso.Picasso
 
 class App: Application() {
 
@@ -18,6 +19,8 @@ class App: Application() {
 
         productsComponent = appComponent.provideProductsComponentBuilder()
             .build()
+
+        picasso = appComponent.providePicasso()
     }
 
 
@@ -25,6 +28,7 @@ class App: Application() {
         private lateinit var appComponent: AppComponent
         lateinit var navigationComponentFactory: NavigationComponent.Factory
         lateinit var productsComponent : ProductsComponent
+        lateinit var picasso : Picasso // Context App -> App = Singleton, no MemoryLeak
 
     }
 }
