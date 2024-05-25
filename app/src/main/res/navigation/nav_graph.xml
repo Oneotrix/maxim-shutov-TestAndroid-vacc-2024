@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_products"
         >
         <action
-            android:id="@+id/action_productsFragment_to_productDetailsFragment2"
-            app:destination="@id/productDetailsFragment2" />
+            android:id="@+id/action_productsFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/productDetailsFragment2"
+        android:id="@+id/productDetailsFragment"
         android:name="com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.product_details.ProductDetailsFragment"
         android:label="ProductDetailsFragment"
         tools:layout="@layout/fragment_product_details"
         >
         <action
-            android:id="@+id/action_productDetailsFragment2_to_productsFragment"
+            android:id="@+id/action_productDetailsFragment_to_productsFragment"
             app:destination="@id/productsFragment" />
     </fragment>
 </navigation>

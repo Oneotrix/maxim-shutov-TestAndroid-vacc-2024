@@ -20,6 +20,8 @@ navigation = "2.7.7"
 # Serialization
 kotlinxSerialization = "1.6.2"
 
+#View
+circleimageview = "3.1.0"
 
 
 [libraries]
@@ -39,6 +41,8 @@ navigation-ui  = { module = "androidx.navigation:navigation-ui-ktx", version.ref
 # Serialization
 kotlinx-serializarion = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization"}
 
+# View
+image-circle = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview"}
 
 
 [plugins]

@@ -65,6 +65,9 @@ dependencies {
     // Picasso
     implementation(network.picasso)
 
+    //View
+    implementation(core.image.circle)
+
     implementation(core.androidx.core.ktx)
     implementation(core.androidx.appcompat)
     implementation(core.material)

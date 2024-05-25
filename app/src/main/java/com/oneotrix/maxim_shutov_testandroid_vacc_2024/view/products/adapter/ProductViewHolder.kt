@@ -6,7 +6,8 @@ import com.oneotrix.maxim_shutov_testandroid_vacc_2024.databinding.ItemProductsB
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.products.MealModel
 
 class ProductViewHolder(
-    private val binding: ItemProductsBinding
+    private val binding: ItemProductsBinding,
+    private val callback: (String) -> Unit,
 ): ViewHolder(binding.root) {
 
     private val picasso by lazy {
@@ -17,6 +18,13 @@ class ProductViewHolder(
         picasso.load(model.imgUrl).into(ivProduct)
         tvTitleMeal.text = model.title
         tvDescription.text = model.description
+
+        binding.root.setOnClickListener {
+            callback.invoke(model.id)
+        }
+
     }
+
+
 
 }

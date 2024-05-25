@@ -1,12 +1,16 @@
 package com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.products
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.App
+import com.oneotrix.maxim_shutov_testandroid_vacc_2024.MainActivity
+import com.oneotrix.maxim_shutov_testandroid_vacc_2024.R
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.databinding.FragmentProductsBinding
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.BaseFragment
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.products.adapter.ProductsAdapter
@@ -24,7 +28,9 @@ class ProductsFragment: BaseFragment<FragmentProductsBinding>(
     private val viewModel: ProductsViewModel by viewModels { viewModelFactory }
 
     private val adapter by lazy {
-        ProductsAdapter()
+        ProductsAdapter{ id ->
+            navigateToProductDetailsFragment(id)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +63,15 @@ class ProductsFragment: BaseFragment<FragmentProductsBinding>(
         rvProducts.addItemDecoration(decorator)
     }
 
+    private fun navigateToProductDetailsFragment(id: String) {
+        val bundle = bundleOf(
+            "id" to id
+        )
 
+        MainActivity.navigationComponent.navigationController().navigate(
+            R.id.action_productsFragment_to_productDetailsFragment,
+            bundle
+        )
+    }
 
 }
