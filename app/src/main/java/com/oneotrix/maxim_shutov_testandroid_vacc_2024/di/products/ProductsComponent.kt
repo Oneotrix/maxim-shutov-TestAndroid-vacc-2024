@@ -9,6 +9,7 @@ import dagger.Subcomponent
         ProductsSubcomponents::class
     ]
 )
+@ProductsScope
 interface ProductsComponent {
 
 

@@ -1,6 +1,5 @@
 package com.oneotrix.maxim_shutov_testandroid_vacc_2024.data
 
-import com.oneotrix.maxim_shutov_testandroid_vacc_2024.data.network.MealNetModel
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.data.network.MealsNetModel
 import retrofit2.http.GET
 import retrofit2.http.Query

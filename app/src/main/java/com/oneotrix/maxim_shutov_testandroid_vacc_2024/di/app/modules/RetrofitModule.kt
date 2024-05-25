@@ -10,6 +10,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
+import javax.inject.Singleton
 
 @Module
 class RetrofitModule {
@@ -19,6 +20,7 @@ class RetrofitModule {
     }
 
     @Provides
+    @Singleton
     fun retrofitService(
         convertedFactory: Converter.Factory,
         okHttpClient: OkHttpClient

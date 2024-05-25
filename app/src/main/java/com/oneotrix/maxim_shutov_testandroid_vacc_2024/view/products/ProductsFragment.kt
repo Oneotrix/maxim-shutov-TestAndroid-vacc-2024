@@ -1,7 +1,6 @@
 package com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.products
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
@@ -23,7 +22,7 @@ class ProductsFragment: BaseFragment<FragmentProductsBinding>(
 ) {
 
     @Inject
-    lateinit var viewModelFactory: ProductViewModelFactory
+    lateinit var viewModelFactory: ProductsViewModelFactory
 
     private val viewModel: ProductsViewModel by viewModels { viewModelFactory }
 

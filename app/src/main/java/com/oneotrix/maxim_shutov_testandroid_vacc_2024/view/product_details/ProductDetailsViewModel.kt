@@ -1,18 +1,15 @@
 package com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.product_details
 
-import android.util.Log
 import android.widget.ImageView
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.App
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.domain.usecase.GetProductDetailsUseCase
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.view.product_details.adapter.IngredientModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class ProductDetailsViewModel(
     private val getProductDetailsUseCase: GetProductDetailsUseCase,

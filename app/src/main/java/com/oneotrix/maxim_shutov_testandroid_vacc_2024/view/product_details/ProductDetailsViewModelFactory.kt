@@ -6,7 +6,7 @@ import com.oneotrix.maxim_shutov_testandroid_vacc_2024.domain.usecase.GetProduct
 import javax.inject.Inject
 import javax.inject.Named
 
-class ProductsDetailsFactory @Inject constructor(
+class ProductDetailsViewModelFactory @Inject constructor(
     private val getProductDetailsUseCase: GetProductDetailsUseCase,
     @Named("id") private val id: String,
 ): ViewModelProvider.Factory {

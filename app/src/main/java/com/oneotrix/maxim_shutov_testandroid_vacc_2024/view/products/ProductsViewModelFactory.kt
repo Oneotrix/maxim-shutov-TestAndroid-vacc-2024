@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.oneotrix.maxim_shutov_testandroid_vacc_2024.domain.usecase.GetProductsUseCase
 import javax.inject.Inject
 
-class ProductViewModelFactory @Inject constructor(
+class ProductsViewModelFactory @Inject constructor(
     private val getProductsUseCase: GetProductsUseCase
 ) : ViewModelProvider.Factory {
 
